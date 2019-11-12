@@ -52,7 +52,7 @@ public class WxController {
 		try {
 			// 微信服务器推送过来的是XML格式。
 			WxXmlMessage wx = XStreamTransformer.fromXml(WxXmlMessage.class, request.getInputStream());
-			System.out.println("消息：\n " + wx.toString());
+			System.out.println("Received message：\n " + wx.toString());
 			router.rule().msgType(WxConsts.XML_MSG_TEXT).matcher(new WhoAmIMatcher()).handler(new WhoAmIHandler()).end()
 					.rule().msgType(WxConsts.XML_MSG_TEXT).handler(ConfigHander.getInstance()).end().rule()
 					.event(WxConsts.EVT_CLICK).eventKey(MenuKey.HELP).handler(HelpDocHandler.getInstance()).next()
