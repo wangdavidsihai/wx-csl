@@ -55,7 +55,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.soecode.music_collector.MusicCollectorApplication</mainClass>
+					<mainClass>com.csl.CSLApplication</mainClass>
 				</configuration>
 				<executions>
 					<execution>
